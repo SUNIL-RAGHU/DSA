@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{AD5DC79F-60C9-4750-B85A-9B61E3613E1A}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DSATREE/Program.cs">
+    <Files>
+      <File FileName="DSATREE/Program.cs" Line="441" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DSATREE" expanded="True">
+            <Node name="DSATREE" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.DSATREE PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
