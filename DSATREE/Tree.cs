@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DSATREE;
 
@@ -36,35 +38,35 @@ class BinaryTree
 		Console.Write(node.val + " ");
 
 	}
-	//void printInPostPreorder(TreeNode node) {
+	void printInPostPreorder(TreeNode node) {
 
-	//	Stack<Tuple<TreeNode, int>> ss = new Stack<Tuple<TreeNode, int>>();
-	//	ss.Push(new Tuple<TreeNode, int>(node, 1));
+		Stack<Tuple<TreeNode, int>> ss = new Stack<Tuple<TreeNode, int>>();
+		ss.Push(new Tuple<TreeNode, int>(node, 1));
 
-	//	List<int> Preorder = new List<int>();
-	//	List<int> Inorder = new List<int>();
-	//	List<int> Postorder = new List<int>();
+		List<int> Preorder = new List<int>();
+		List<int> Inorder = new List<int>();
+		List<int> Postorder = new List<int>();
 
-	//	while (ss.Any())
-	//       {
-	//           Tuple<TreeNode,int> it = ss.Pop();
+		while (ss.Any())
+	      {
+	          Tuple<TreeNode,int> it = ss.Pop();
 
-	//           if (it.Item2 == 1)
-	//           {
-	//			Tuple<TreeNode, int> temp = ss.Peek();
+	          if (it.Item2 == 1)
+	          {
+				Tuple<TreeNode, int> temp = ss.Peek();
 
-	//			temp = new Tuple<TreeNode,int>(temp.Item1, temp.Item2 + 1);
+				temp = new Tuple<TreeNode,int>(temp.Item1, temp.Item2 + 1);
 
-	//			ss.Pop();
-	//			ss.Push(temp);
-
-
-
-	//		}
-	//       }
+				ss.Pop();
+				ss.Push(temp);
 
 
-	//}
+
+			}
+	      }
+
+
+	}
 
 	int MaxDepth(TreeNode node)
 	{
@@ -486,14 +488,14 @@ class BinaryTree
 		tree.root.right = new TreeNode(3);
 		tree.root.left.left = new TreeNode(4);
 		tree.root.left.right = new TreeNode(5);
-		//Console.Write(tree.IsSameTree(tree.root,tree.root));
-		//Console.Write(tree.diameteroftree);
-		//Console.WriteLine(tree.isbalanced(tree.root));
-		//Console.WriteLine(tree.MinDepth(tree.root));
-		//tree.IterativeprintPostorder();
-		//      tree.IterativeprintInorder();
+		Console.Write(tree.IsSameTree(tree.root,tree.root));
+		Console.Write(tree.diameteroftree);
+		Console.WriteLine(tree.isbalanced(tree.root));
+		Console.WriteLine(tree.MinDepth(tree.root));
+		tree.IterativeprintPostorder();
+		     tree.IterativeprintInorder();
 
-		//Console.WriteLine(tree.MaxDepth(tree.root));
+		Console.WriteLine(tree.MaxDepth(tree.root));
 
 		int[] preorder = { 3, 9, 20, 15, 7 };
 		int[] inorder = { 9, 3, 15, 20, 7 };
@@ -515,20 +517,20 @@ class BinaryTree
 
             Console.WriteLine();
         }
-        //Console.WriteLine("Preorder traversal "
-        //                      + "of binary tree is ");
-        //tree.printPreorder();
+        Console.WriteLine("Preorder traversal "
+                             + "of binary tree is ");
+        tree.printPreorder();
 
-        //Console.WriteLine("Iterative Preorder traversal "
-        //                     + "of binary tree is "); tree.IterativeprintPreorder();
+        Console.WriteLine("Iterative Preorder traversal "
+                            + "of binary tree is "); tree.IterativeprintPreorder();
 
-        //Console.WriteLine("\nInorder traversal "
-        //                + "of binary tree is ");
-        //tree.printInorder();
+        Console.WriteLine("\nInorder traversal "
+                       + "of binary tree is ");
+        tree.printInorder();
 
-        //Console.WriteLine("\nPostorder traversal "
-        //                + "of binary tree is ");
-        //tree.printPostorder();
+        Console.WriteLine("\nPostorder traversal "
+                       + "of binary tree is ");
+        tree.printPostorder();
 
 
 
